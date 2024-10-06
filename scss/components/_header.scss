@@ -1,0 +1,66 @@
+@use "../variables" as *;
+
+.header {
+  background-image: url('../img/bg-header.jpg');
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 37px 0 31px 0;
+  }
+
+  &__logo {
+    margin-right: auto;
+  }
+
+  &__address {
+    max-width: 151px;
+    color: $white;
+    font-size: 12px;
+    position: relative;
+    margin-right: 69px;
+  }
+  
+  &__address::before {
+    content: '';
+    position: absolute;
+    height: 23px;
+    width: 17px;
+    top: 0px;
+    left: -30px;
+    background-image: url(../img/icons/address.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__phone {
+    position: relative;
+  }
+
+  &__phone::before {
+    content: '';
+    position: absolute;
+    height: 19px;
+    width: 19px;
+    top: 10px;
+    left: -25px;
+    background-image: url(../img/icons/phone.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__phone-number {
+    color: $white;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.52;
+  }
+
+  &__phone-text {
+    color: $white;
+    font-size: 13px;
+  }
+}

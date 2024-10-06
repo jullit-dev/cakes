@@ -1,0 +1,46 @@
+@use "../variables" as *;
+
+.hero {
+  max-width: 650px;
+  padding: 188px 0 465px;
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: $white;
+  }
+
+  &__text {
+    max-width: 560px;
+    margin-bottom: 40px;
+    line-height: 1.43;
+    color: #fff;
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+  }
+
+  &__action-button {
+    border-radius: 8px;
+    padding: 30px 50px;
+    margin-right: 20px;
+    background-color: $button;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.52;
+    text-align: center;
+  }
+
+  &__action-text {
+    max-width: 150px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #fff;
+  }
+}

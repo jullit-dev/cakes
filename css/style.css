@@ -1,0 +1,234 @@
+@charset "UTF-8";
+:root {
+  --font-size: 24px;
+}
+
+@media (min-width: 2000px) {
+  :root {
+    --font-size: 28px;
+  }
+}
+@media (max-width: 1140px) {
+  :root {
+    --font-size: 20px;
+  }
+}
+@media (max-width: 520px) {
+  :root {
+    --font-size: 16px;
+  }
+}
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat-Regular"), url("../fonts/MontserratRegular.woff2") format("woff2"), url("../fonts/MontserratRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "MontserratMedium";
+  src: local("Montserrat-Medium"), url("../fonts/MontserratMedium.woff2") format("woff2"), url("../fonts/MontserratMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "MontserratBold";
+  src: local("Montserrat-Bold"), url("../fonts/MontserratBold.woff2") format("woff2"), url("../fonts/MontserratBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  position: relative;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  font-size: var(--font-size);
+  font-weight: 400;
+  line-height: 1.5;
+  color: #2e363e;
+  background-color: #f2f6fa;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  max-height: 100%;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+fieldset {
+  margin: 0;
+}
+
+iframe {
+  border: none;
+}
+
+/* Доступно скрыть элементы */
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (min-width: 2000px) {
+  .container {
+    max-width: 1600px;
+    padding: 0 60px;
+  }
+}
+@media (max-width: 520px) {
+  .container {
+    padding: 0 14px;
+  }
+}
+
+.header {
+  background-image: url("../img/bg-header.jpg");
+}
+.header__menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 37px 0 31px 0;
+}
+.header__logo {
+  margin-right: auto;
+}
+.header__address {
+  max-width: 151px;
+  color: #ffffff;
+  font-size: 12px;
+  position: relative;
+  margin-right: 69px;
+}
+.header__address::before {
+  content: "";
+  position: absolute;
+  height: 23px;
+  width: 17px;
+  top: 0px;
+  left: -30px;
+  background-image: url(../img/icons/address.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.header__phone {
+  position: relative;
+}
+.header__phone::before {
+  content: "";
+  position: absolute;
+  height: 19px;
+  width: 19px;
+  top: 10px;
+  left: -25px;
+  background-image: url(../img/icons/phone.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.header__phone-number {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.52;
+}
+.header__phone-text {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.hero {
+  max-width: 650px;
+  padding: 188px 0 465px;
+}
+.hero__title {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+.hero__text {
+  max-width: 560px;
+  margin-bottom: 40px;
+  line-height: 1.43;
+  color: #fff;
+}
+.hero__action {
+  display: flex;
+  align-items: center;
+}
+.hero__action-button {
+  border-radius: 8px;
+  padding: 30px 50px;
+  margin-right: 20px;
+  background-color: #fed84c;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.52;
+  text-align: center;
+}
+.hero__action-text {
+  max-width: 150px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */
