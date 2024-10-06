@@ -1,0 +1,22 @@
+@use "../variables" as *;
+
+.catalog {
+  background-color: #fff;
+
+  &__title {
+    margin-bottom: 80px;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: $dark-text;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 380px);
+    justify-content: center;
+    gap: 20px;
+  }
+}

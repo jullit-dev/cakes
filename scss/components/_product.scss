@@ -1,0 +1,41 @@
+@use "../variables" as *;
+
+.product {
+  &__description {
+    padding: 50px 44px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.43;
+    color: $dark-text;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $dark-text;
+  }
+
+  &__price {
+    margin-bottom: 14px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.5;
+    color: $price;
+  }
+
+  &__btn {
+    border-radius: 8px;
+    padding: 20px 40px;
+    background-color: $button;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.52;
+    color: $dark-text;
+  }
+}
