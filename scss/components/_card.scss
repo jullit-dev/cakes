@@ -1,0 +1,40 @@
+@use "../variables" as *;
+
+.card {
+  position: relative;
+
+  &__info {
+    position: absolute;
+    top: 530px;
+    left: -94px;
+  }
+
+  &__name {
+    position: absolute;
+    top: 530px;
+    left: -94px;
+    width: max-content;
+    padding: 15px 24px;
+    background-color: $dark-text;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: $white
+  }
+
+  &__profession {
+    position: absolute;
+    top: 596px;
+    left: -63px;
+    width: max-content;
+    padding: 15px 24px;
+    background-color: $light;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+    color: $dark-text;
+  }
+}

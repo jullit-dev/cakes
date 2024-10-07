@@ -1,0 +1,58 @@
+@use "../variables" as *;
+
+.confectioner {
+  background-color: #fff;
+  padding: 97px 0 96px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between
+  }
+
+  &__content {
+    max-width: 580px;
+  }
+
+  &__supertitle {
+    margin-bottom: 24px;
+  }
+  
+  &__title {
+    margin-bottom: 36px;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: $dark-text;
+  }
+
+  &__list {
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    padding-left: 22px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: $dark-text;
+    background-image: url('../img/icons/list.svg');
+    background-repeat: no-repeat;
+    background-position: top 6px left;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    border-radius: 8px;
+    padding: 30px 50px;
+    background-color: $button;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.52;
+    text-align: center;
+    color: $dark-text
+  }
+}
