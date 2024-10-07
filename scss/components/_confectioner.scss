@@ -1,7 +1,7 @@
 @use "../variables" as *;
 
 .confectioner {
-  background-color: #fff;
+  background-color: $light-background;
   padding: 97px 0 96px 0;
 
   &__container {

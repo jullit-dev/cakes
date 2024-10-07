@@ -1,0 +1,63 @@
+@use "../variables" as *;
+
+.reviews {
+  position: relative;
+  padding: 306px 0 308px;
+  background-color: $dark-background;
+  background-image: url('../img/bg-reviews_top.png'),
+  url('../img/bg-reviews_bottom.png');
+  background-repeat: no-repeat;
+  background-size: contain, contain;
+  background-position: top, bottom;
+
+  &__item--previous .review,
+  &__item--next .review {
+    position: absolute;
+    top: 450px;
+    width: 1180px;
+    opacity: 0.1;
+  }
+
+  &__item--previous .review {
+    transform: scale(0.9) translateX(-110%);
+  }
+
+  &__item--next .review {
+    transform: scale(0.9) translateX(110%);
+  }
+
+  &__title {
+    margin-bottom: 80px;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: $white;
+  }
+
+  &__card {
+    margin-bottom: 70px;
+  }
+
+  &__control {
+    text-align: center;
+  }
+
+  &__btn {
+    padding-left: 10px;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background-color: $button;
+  }
+
+  &__btn--left {
+    margin-right: 23px;
+    padding-left: 20px;
+  }
+
+  &__btn--right {
+    padding-left: 25px;
+  }
+}

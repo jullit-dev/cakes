@@ -1,0 +1,73 @@
+@use "../variables" as *;
+
+.review {
+  display: flex;
+  justify-content: space-between;
+  gap: 54px;
+  background-color: $light-background;
+  background-image: url('../img/icons/quote.svg');
+  background-repeat: no-repeat;
+  background-position: top 70px left 143px;
+  box-shadow: 2px 8px 16px 0 rgba(194, 198, 208, 0.06);
+  border: 2px solid #e2eaf2;
+  border-radius: 5px;
+  padding: 70px 143px;
+
+  &__quote {
+    width: max-content;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    padding-top: 64px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.43;
+    color: $dark-text;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.7;
+    color: $dark-text;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #4a94ff;
+  }
+
+  &__author {
+    min-width: 380px;
+  }
+
+  &__img {
+    margin-bottom: 30px;
+    background-color: $light;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    border: 1px solid #f2f6fa;
+  }
+
+  &__name {
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 1.43;
+    text-align: center;
+    color: $dark-text;
+  }
+
+  &__city {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: center;
+    color: #a6aeb6;
+  }
+}

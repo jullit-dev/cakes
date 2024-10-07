@@ -1,7 +1,7 @@
 @use "../variables" as *;
 
 .catalog {
-  background-color: #fff;
+  background-color: $light-background;
 
   &__title {
     margin-bottom: 80px;
