@@ -548,4 +548,36 @@ iframe {
   line-height: 1.7;
   text-align: center;
   color: #a6aeb6;
+}
+
+.gallery {
+  background-color: #ffffff;
+}
+.gallery__title {
+  margin-bottom: 14px;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #2e363e;
+}
+.gallery__text {
+  margin-bottom: 80px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.43;
+  text-align: center;
+  color: #2e363e;
+}
+.gallery__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 9px;
+}
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
