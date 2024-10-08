@@ -87,11 +87,29 @@ button {
   cursor: pointer;
   border: none;
   background-color: transparent;
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+  outline: none;
+}
+
+button:hover,
+button:focus-visible {
+  filter: contrast(130%);
+}
+
+button:active {
+  transform: scale(0.9);
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  transition: color 0.3s ease-in-out;
+  outline: none;
+}
+
+a:hover,
+a:focus-visible {
+  color: #fed84c;
 }
 
 ul {
@@ -107,6 +125,10 @@ p,
 figure,
 fieldset {
   margin: 0;
+}
+
+input {
+  outline: none;
 }
 
 fieldset {
@@ -636,6 +658,11 @@ iframe {
   border-radius: 8px;
   width: 380px;
   height: 85px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.52;
+  color: #2e363e;
+  transition: background-color 0.3s ease-in-out;
 }
 .form__input::-moz-placeholder {
   font-weight: 400;
@@ -648,6 +675,9 @@ iframe {
   font-size: 15px;
   line-height: 1.6;
   color: #7e868e;
+}
+.form__input:hover, .form__input:focus-visible {
+  background-color: #e5edf5;
 }
 .form__btn {
   border-radius: 8px;
