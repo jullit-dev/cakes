@@ -1,0 +1,22 @@
+@use "../variables" as *;
+
+.footer {
+  padding: 40px 0 80px;
+  background-color: $dark-background;
+
+  &__list {
+    display: flex;
+    gap: 43px;
+    justify-content: center;
+    margin-bottom: 22px;
+  }
+
+  &__item,
+  &__copyright {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    color: $footer-text;
+  }
+}

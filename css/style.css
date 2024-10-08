@@ -669,4 +669,22 @@ iframe {
 }
 .form__checkbox-link {
   text-decoration: underline;
+}
+
+.footer {
+  padding: 40px 0 80px;
+  background-color: #081130;
+}
+.footer__list {
+  display: flex;
+  gap: 43px;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+.footer__item, .footer__copyright {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  color: #7e868e;
 }/*# sourceMappingURL=style.css.map */
