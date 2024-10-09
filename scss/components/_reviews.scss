@@ -1,4 +1,5 @@
 @use "../variables" as *;
+@use "../media" as *;
 
 .reviews {
   position: relative;
@@ -9,6 +10,14 @@
   background-repeat: no-repeat;
   background-size: contain, contain;
   background-position: top, bottom;
+
+  @include tablet {
+    padding: 250px 0 250px;
+  }
+
+  @include mobile {
+    padding: 150px 0 150px;
+  }
 
   &__item--previous .review,
   &__item--next .review {
@@ -34,6 +43,15 @@
     letter-spacing: -0.02em;
     text-align: center;
     color: $white;
+
+    @include tablet {
+      font-size: 42px;
+      margin-bottom: 50px;
+    }
+
+    @include mobile {
+      font-size: 28px;
+    }
   }
 
   &__card {

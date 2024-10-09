@@ -1,4 +1,5 @@
 @use "../variables" as *;
+@use "../media" as *;
 
 .order {
   position: relative;
@@ -7,27 +8,71 @@
     url('../img/bg-order_bottom.png'),
     url('../img/phone.png');
   background-repeat: no-repeat;
-  background-position: top, bottom, top 330px left,;
-  background-size: contain, contain, auto;
+  background-position: top, bottom, bottom left;
+  background-size: contain, contain, 50% auto;
+
+  @include tablet {
+    background-position: top, bottom, bottom right;
+  }
+
+  @include mobile {
+    background-position: top, bottom, bottom center;
+  }
 
   &__content {
-    padding: 439px 20px 459px 700px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    ". supertitle"
+    ". title"
+    ". text"
+    ". btn";
+    padding: 439px 0px 459px;
+
+    @include laptop {
+      grid-template-areas: 
+      "supertitle supertitle"
+      "title title"
+      ". text"
+      ". btn";
+      padding: 200px 0 337px;
+    }
+
+    @include tablet {
+      grid-template-areas: 
+      "supertitle supertitle"
+      "title title"
+      "text text"
+      "btn btn";
+      padding: 200px 0 300px;
+    }
   }
 
   &__supertitle {
+    grid-area: supertitle;
     margin-bottom: 34px;
   }
 
   &__title {
+    grid-area: title;
     margin-bottom: 24px;
     font-weight: 500;
     font-size: 48px;
     line-height: 1.25;
     letter-spacing: -0.02em;
     color: $white;
+
+    @include laptop {
+      font-size: 42px;
+    }
+
+    @include mobile {
+      font-size: 28px;
+    }
   }
 
   &__text {
+    grid-area: text;
     margin-bottom: 40px;
     font-weight: 400;
     font-size: 21px;
@@ -37,13 +82,21 @@
   }
 
   &__btn {
+    grid-area: btn;
     border-radius: 8px;
     padding: 30px 50px;
+    width: max-content;
     background-color: $button;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.52;
     text-align: center;
     color: $dark-text;
+
+    @include mobile {
+      justify-self: center;
+      padding: 20px 30px;
+      font-size: 16px;
+    }
   }
 }

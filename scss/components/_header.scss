@@ -1,16 +1,23 @@
 @use "../variables" as *;
+@use "../media" as *;
 
 .header {
   background-image: url('../img/bg-header.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
 
   &__menu {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 37px 0 31px 0;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 15px;
+    }
   }
 
   &__logo {
@@ -23,6 +30,10 @@
     font-size: 12px;
     position: relative;
     margin-right: 69px;
+
+    @include tablet {
+      margin-right: 0;
+    }
   }
   
   &__address::before {
