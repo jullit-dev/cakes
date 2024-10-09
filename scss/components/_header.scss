@@ -5,13 +5,13 @@
   background-image: url('../img/bg-header.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom;
+  background-position: top;
 
   &__menu {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 37px 0 31px 0;
+    padding: 34px 0 31px 0;
 
     @include tablet {
       flex-direction: column;
@@ -29,7 +29,7 @@
     color: $white;
     font-size: 12px;
     position: relative;
-    margin-right: 69px;
+    margin-right: 91px;
 
     @include tablet {
       margin-right: 0;
@@ -41,7 +41,7 @@
     position: absolute;
     height: 23px;
     width: 17px;
-    top: 0px;
+    top: 2px;
     left: -30px;
     background-image: url(../img/icons/address.svg);
     background-size: contain;
@@ -59,7 +59,7 @@
     height: 19px;
     width: 19px;
     top: 10px;
-    left: -25px;
+    left: -33px;
     background-image: url(../img/icons/phone.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -71,6 +71,7 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 1.52;
+    letter-spacing: 0.02em;
   }
 
   &__phone-text {

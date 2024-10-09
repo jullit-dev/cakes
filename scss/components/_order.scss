@@ -8,8 +8,8 @@
     url('../img/bg-order_bottom.png'),
     url('../img/phone.png');
   background-repeat: no-repeat;
-  background-position: top, bottom, bottom left;
-  background-size: contain, contain, 50% auto;
+  background-position: top, bottom, bottom left 6px;
+  background-size: contain, contain, 51% auto;
 
   @include tablet {
     background-position: top, bottom, bottom right;
@@ -27,7 +27,8 @@
     ". title"
     ". text"
     ". btn";
-    padding: 439px 0px 459px;
+    gap: 0 220px;
+    padding: 412px 0px 453px;
 
     @include laptop {
       grid-template-areas: 
@@ -50,7 +51,7 @@
 
   &__supertitle {
     grid-area: supertitle;
-    margin-bottom: 34px;
+    margin-bottom: 22px;
   }
 
   &__title {
@@ -59,7 +60,7 @@
     font-weight: 500;
     font-size: 48px;
     line-height: 1.25;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
     color: $white;
 
     @include laptop {
@@ -73,7 +74,7 @@
 
   &__text {
     grid-area: text;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
     font-weight: 400;
     font-size: 21px;
     line-height: 1.43;
@@ -90,6 +91,7 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 1.52;
+    letter-spacing: 0.07em;
     text-align: center;
     color: $dark-text;
 

@@ -12,7 +12,7 @@
   box-shadow: 2px 8px 16px 0 rgba(194, 198, 208, 0.06);
   border: 2px solid #e2eaf2;
   border-radius: 5px;
-  padding: 70px 143px;
+  padding: 70px 143px 73px;
 
   @include tablet {
     flex-direction: column;
@@ -36,10 +36,11 @@
 
   &__title {
     margin-bottom: 24px;
-    padding-top: 64px;
+    padding-top: 60px;
     font-weight: 500;
     font-size: 30px;
     line-height: 1.43;
+    letter-spacing: 0.01em;
     color: $dark-text;
 
     @include mobile {
@@ -48,7 +49,7 @@
   }
 
   &__text {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     font-weight: 400;
     font-size: 15px;
     line-height: 1.7;
@@ -76,8 +77,7 @@
   }
 
   &__img {
-    align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
     background-color: $light;
     width: 380px;
     height: 380px;

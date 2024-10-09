@@ -2,7 +2,7 @@
 @use "../media" as *;
 
 .card {
-  position: relative;
+  position: absolute;
 
   &__info {
     position: absolute;
@@ -12,10 +12,10 @@
 
   &__name {
     position: absolute;
-    top: 530px;
-    left: -94px;
+    top: 583px;
+    left: -47px;
     width: max-content;
-    padding: 15px 24px;
+    padding: 12px 24px;
     background-color: $dark-text;
     font-weight: 500;
     font-size: 24px;
@@ -29,22 +29,24 @@
     }
 
     @include tablet {
-      left: 0;
+      top: 277px;
+      left: -62px;
     }
 
     @include mobile {
-      top: 255px;
       font-size: 18px;
       padding: 10px 20px;
+      top: 219px;
+      left: 93px;
     }
   }
 
   &__profession {
     position: absolute;
-    top: 596px;
-    left: -63px;
+    top: 643px;
+    left: -11px;
     width: max-content;
-    padding: 15px 24px;
+    padding: 12px 24px;
     background-color: $light;
     font-weight: 400;
     font-size: 18px;
@@ -59,12 +61,13 @@
     }
 
     @include tablet {
-      left: 33px;
+      left: -33px;
+      top: 337px;
     }
 
     @include mobile {
-      top: 302px;
-      left: 22px;
+      top: 266px;
+      left: 117px;
       font-size: 14px;
       padding: 10px 20px;
     }

@@ -11,6 +11,7 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 1.43;
+    letter-spacing: 0.03em;
     color: $dark-text;
   }
 
@@ -23,7 +24,7 @@
   }
 
   &__price {
-    margin-bottom: 14px;
+    margin-bottom: 15px;
     font-weight: 500;
     font-size: 24px;
     line-height: 1.5;
@@ -37,6 +38,7 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 1.52;
+    letter-spacing: 0.07em;
     color: $dark-text;
 
     @include mobile {
