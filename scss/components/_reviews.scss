@@ -3,7 +3,7 @@
 
 .reviews {
   position: relative;
-  padding: 253px 0 308px;
+  padding: 265px 0 308px;
   background-color: $dark-background;
   background-image: url('../img/bg-reviews_top.png'),
   url('../img/bg-reviews_bottom.png');
@@ -21,22 +21,6 @@
 
   &__list {
     margin-bottom: 70px;
-  }
-
-  &__item--previous .review,
-  &__item--next .review {
-    position: absolute;
-    top: 393px;
-    width: 1180px;
-    opacity: 0.1;
-  }
-
-  &__item--previous .review {
-    transform: scale(0.79) translateX(-119%);
-  }
-
-  &__item--next .review {
-    transform: scale(0.79) translateX(119%);
   }
 
   &__title {

@@ -512,7 +512,7 @@ iframe {
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   gap: 20px;
-  padding: 20px 52px 95px 40px;
+  padding: 20px 52px 0 40px;
   max-width: 1272px;
   margin: 0 auto;
 }
@@ -650,7 +650,7 @@ iframe {
 
 .reviews {
   position: relative;
-  padding: 253px 0 308px;
+  padding: 265px 0 308px;
   background-color: #081130;
   background-image: url("../img/bg-reviews_top.png"), url("../img/bg-reviews_bottom.png");
   background-repeat: no-repeat;
@@ -669,18 +669,6 @@ iframe {
 }
 .reviews__list {
   margin-bottom: 70px;
-}
-.reviews__item--previous .review, .reviews__item--next .review {
-  position: absolute;
-  top: 393px;
-  width: 1180px;
-  opacity: 0.1;
-}
-.reviews__item--previous .review {
-  transform: scale(0.79) translateX(-119%);
-}
-.reviews__item--next .review {
-  transform: scale(0.79) translateX(119%);
 }
 .reviews__title {
   margin-bottom: 80px;
@@ -719,10 +707,22 @@ iframe {
   padding-left: 27px;
 }
 
+.swiper-slide {
+  box-sizing: border-box !important;
+}
+
+.swiper-backface-hidden .swiper-slide.swiper-slide-prev,
+.swiper-backface-hidden .swiper-slide.swiper-slide-next {
+  opacity: 0.1;
+  transform: scale(0.79);
+}
+
 .review {
   display: flex;
   justify-content: space-between;
   gap: 54px;
+  width: -moz-max-content;
+  width: max-content;
   background-color: #ffffff;
   background-image: url("../img/icons/quote.svg");
   background-repeat: no-repeat;
@@ -732,10 +732,20 @@ iframe {
   border-radius: 5px;
   padding: 70px 143px 73px;
 }
-@media (max-width: 940px) {
+@media (max-width: 1750px) {
   .review {
     flex-direction: column;
     align-items: center;
+  }
+}
+@media (max-width: 1140px) {
+  .review {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 1140px) {
+  .review {
     padding: 28px 48px;
     background-position: top 44px left 50px;
   }
@@ -750,7 +760,7 @@ iframe {
   width: -moz-max-content;
   width: max-content;
 }
-@media (max-width: 940px) {
+@media (max-width: 1750px) {
   .review__quote {
     width: 100%;
   }

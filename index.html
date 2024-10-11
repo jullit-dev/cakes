@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link  rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
   <link href="css/style.css" rel="stylesheet">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  <script defer src="js/swiper.js"></script>
   <title>Сладкий сундук — доставка пирожных и капкейков</title>
 </head>
 <body class="body">
@@ -225,10 +232,53 @@
         <h2 class="reviews__title">
           Почитайте отзывы довольных клиентов
         </h2>
-        <ul class="reviews__list">
+      </div>
 
-          <li class="reviews__item reviews__item--previous">
-            <article class="reviews__card review">
+      <div class="swiper reviews__swiper">
+        <div class="swiper-wrapper reviews__list">
+          
+          <div class="swiper-slide reviews__item reviews__card review">        
+            <div class="review__quote">
+              <h3 class="review__title">
+                &laquo;Результат дико порадовал, друзья были в&nbsp;восторге&raquo;
+              </h3>
+              <p class="review__text">
+                &quot;Заказала капкейки, как подарок на&nbsp;новый год. Делать заказ было легко и&nbsp;приятно, ну&nbsp;а&nbsp;результат дико порадовал, друзья были в&nbsp;восторге. И&nbsp;оформление, и&nbsp;на&nbsp;вкус капкейки были просто замечательные. Обязательно буду заказывать еще)) Уже строю планы, чтобы попробовать все начинки. Они восхитительны!) Даже кушать было жалко, такая красота!)
+              </p>
+              <a class="review__link" href="#">
+                Читать отзыв полностью
+              </a>
+            </div>
+            <div class="review__author">
+              <img class="review__img" src="img/review_img-2.jpg" alt="Ирина Ларионова">
+              <p class="review__name">Ирина Ларионова</p>
+              <p class="review__city">Санкт-Петербург</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide reviews__item reviews__card review">
+            <div class="review__quote">
+              <h3 class="review__title">
+                &laquo;Спасибо за&nbsp;прекрасные капкейки, все на&nbsp;высоте&raquo;
+              </h3>
+              <p class="review__text">
+                &laquo;Вставьте отзыв целиком или часть отзыва клиента. Никогда не&nbsp;выдумывайте отзывы самостоятельно. Фильшивые отзывы всегда видно. Будьте честны.
+              </p>
+              <p class="review__text">
+                Опишите конечный результат, который получил человек после работы с&nbsp;вами. Что конеретно ему это дало. Можно описывать результат в&nbsp;цифрах, чтобы была конкретика&raquo;
+              </p>
+              <a class="review__link" href="#">
+                Читать отзыв полностью
+              </a>
+            </div>
+            <div class="review__author">
+              <img class="review__img" src="" alt="">
+              <p class="review__name">Иван Демидов</p>
+              <p class="review__city">Краснодар</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide reviews__item reviews__card review">
               <div class="review__quote">
                 <h3 class="review__title">
                   &laquo;Лучшую фразу из&nbsp;отзыва напишите в&nbsp;заголовке&raquo;
@@ -248,63 +298,35 @@
                 <p class="review__name">Елена Демидова</p>
                 <p class="review__city">Санкт-Петербург</p>
               </div>
-            </article>
-          </li>
+          </div>
 
-          <li class="reviews__item reviews__item--open">        
-            <article class="reviews__card review">
-              <div class="review__quote">
-                <h3 class="review__title">
-                  &laquo;Результат дико порадовал, друзья были в&nbsp;восторге&raquo;
-                </h3>
-                <p class="review__text">
-                  &quot;Заказала капкейки, как подарок на&nbsp;новый год. Делать заказ было легко и&nbsp;приятно, ну&nbsp;а&nbsp;результат дико порадовал, друзья были в&nbsp;восторге. И&nbsp;оформление, и&nbsp;на&nbsp;вкус капкейки были просто замечательные. Обязательно буду заказывать еще)) Уже строю планы, чтобы попробовать все начинки. Они восхитительны!) Даже кушать было жалко, такая красота!)
-                </p>
-                <a class="review__link" href="#">
-                  Читать отзыв полностью
-                </a>
-              </div>
-              <div class="review__author">
-                <img class="review__img" src="img/review_img-2.jpg" alt="Ирина Ларионова">
-                <p class="review__name">Ирина Ларионова</p>
-                <p class="review__city">Санкт-Петербург</p>
-              </div>
-            </article>
-          </li>
+          <div class="swiper-slide reviews__item reviews__card review">        
+            <div class="review__quote">
+              <h3 class="review__title">
+                &laquo;Результат дико порадовал, друзья были в&nbsp;восторге&raquo;
+              </h3>
+              <p class="review__text">
+                &quot;Заказала капкейки, как подарок на&nbsp;новый год. Делать заказ было легко и&nbsp;приятно, ну&nbsp;а&nbsp;результат дико порадовал, друзья были в&nbsp;восторге. И&nbsp;оформление, и&nbsp;на&nbsp;вкус капкейки были просто замечательные. Обязательно буду заказывать еще)) Уже строю планы, чтобы попробовать все начинки. Они восхитительны!) Даже кушать было жалко, такая красота!)
+              </p>
+              <a class="review__link" href="#">
+                Читать отзыв полностью
+              </a>
+            </div>
+            <div class="review__author">
+              <img class="review__img" src="img/review_img-2.jpg" alt="Ирина Ларионова">
+              <p class="review__name">Ирина Ларионова</p>
+              <p class="review__city">Санкт-Петербург</p>
+            </div>
+          </div>
 
-          <li class="reviews__item reviews__item--next">
-            <article class="reviews__card review">
-              <div class="review__quote">
-                <h3 class="review__title">
-                  &laquo;Спасибо за&nbsp;прекрасные капкейки, все на&nbsp;высоте&raquo;
-                </h3>
-                <p class="review__text">
-                  &laquo;Вставьте отзыв целиком или часть отзыва клиента. Никогда не&nbsp;выдумывайте отзывы самостоятельно. Фильшивые отзывы всегда видно. Будьте честны.
-                </p>
-                <p class="review__text">
-                  Опишите конечный результат, который получил человек после работы с&nbsp;вами. Что конеретно ему это дало. Можно описывать результат в&nbsp;цифрах, чтобы была конкретика&raquo;
-                </p>
-                <a class="review__link" href="#">
-                  Читать отзыв полностью
-                </a>
-              </div>
-              <div class="review__author">
-                <img class="review__img" src="" alt="">
-                <p class="review__name">Иван Демидов</p>
-                <p class="review__city">Краснодар</p>
-              </div>
-            </article>
-          </li>
-
-        </ul>
-
+        </div>
         <div class="reviews__control">
-          <button class="reviews__btn reviews__btn--left">
+          <button class="swiper-btn-prev reviews__btn reviews__btn--left">
             <svg width="17" height="26" viewBox="0 0 17 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M14.106 2.70618L3.74011 13.072L14.106 23.4379" stroke="#2E363E" stroke-width="4" stroke-linecap="round" />
             </svg>
           </button>
-          <button class="reviews__btn reviews__btn--right">
+          <button class="swiper-btn-next reviews__btn reviews__btn--right">
             <svg class="reviews__btn-svg" width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2.19567 2.70618L12.5615 13.072L2.19567 23.4379" stroke="#2E363E" stroke-width="4" stroke-linecap="round" />
             </svg>

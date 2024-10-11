@@ -1,0 +1,9 @@
+.swiper-slide {
+  box-sizing: border-box !important;
+}
+
+.swiper-backface-hidden .swiper-slide.swiper-slide-prev,
+.swiper-backface-hidden .swiper-slide.swiper-slide-next {
+  opacity: 0.1;
+  transform: scale(0.79);
+}
