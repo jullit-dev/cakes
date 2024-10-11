@@ -2,26 +2,29 @@
 @use "../media" as *;
 
 .confectioner {
-  position: relative;
   background-color: $light-background;
-  padding: 104px 0 95px 0;
 
   &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 20px;
+    padding: 20px 52px 95px 40px;
+    max-width: 1272px;
+    margin: 0 auto;
+
     @include tablet {
-      padding-bottom: 300px;
+      grid-template-columns: 1fr;
+    }
+  
+    @include mobile {
+      padding: 0 14px;
     }
   }
 
   &__content {
     max-width: 580px;
-
-    @include laptop {
-      max-width: 50%;
-    }
-
-    @include tablet {
-      max-width: 100%;
-    }
+    padding-top: 83px;
   }
 
   &__supertitle {
@@ -48,7 +51,7 @@
 
   &__list {
     margin-bottom: 50px;
-    max-width: 470px;
+    max-width: 475px;
 
     @include laptop {
       margin-bottom: 30px;
@@ -67,7 +70,7 @@
     color: $dark-text;
     background-image: url('../img/icons/list.svg');
     background-repeat: no-repeat;
-    background-position: top 6px left;
+    background-position: top 2px left;
   }
 
   &__item:not(:last-child) {
@@ -90,31 +93,9 @@
     color: $dark-text;
 
     @include mobile {
-      padding: 20px 30px;
+      padding: 20px;
+      width: 100%;
       font-size: 16px;
-    }
-  }
-
-  &__card {
-    top: -4%;
-    left: 48%;
-    padding: 50px;
-
-    @include laptop {
-      top: 10%;
-      left: 57%;
-    }
-
-    @include tablet {
-      top: 53%;
-      left: 45%;
-      max-width: 367px;
-    }
-
-    @include mobile {
-      top: 65%;
-      left: 0;
-      max-width: 300px;
     }
   }
 }

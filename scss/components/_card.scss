@@ -2,74 +2,48 @@
 @use "../media" as *;
 
 .card {
-  position: absolute;
+  position: relative;
 
   &__info {
     position: absolute;
-    top: 530px;
-    left: -94px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 20%;
+    left: -16%;
+
+    @include laptop {
+      left: -5%;
+    }
+
+    @include mobile {
+      bottom: 10%;
+      left: 0;
+    }
+  }
+
+  &__wrap {
+    display: flex;
   }
 
   &__name {
-    position: absolute;
-    top: 583px;
-    left: -47px;
-    width: max-content;
-    padding: 12px 24px;
     background-color: $dark-text;
+    padding: 12px 0;
     font-weight: 500;
     font-size: 24px;
     letter-spacing: -0.01em;
     text-align: center;
     color: $white;
-
-    @include laptop {
-      top: 431px;
-      left: -70px;
-    }
-
-    @include tablet {
-      top: 277px;
-      left: -62px;
-    }
-
-    @include mobile {
-      font-size: 18px;
-      padding: 10px 20px;
-      top: 219px;
-      left: 93px;
-    }
   }
 
   &__profession {
-    position: absolute;
-    top: 643px;
-    left: -11px;
-    width: max-content;
-    padding: 12px 24px;
     background-color: $light;
+    padding: 12px 0;
     font-weight: 400;
     font-size: 18px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     text-align: center;
     color: $dark-text;
-
-    @include laptop {
-      top: 497px;
-      left: -38px;
-    }
-
-    @include tablet {
-      left: -33px;
-      top: 337px;
-    }
-
-    @include mobile {
-      top: 266px;
-      left: 117px;
-      font-size: 14px;
-      padding: 10px 20px;
-    }
   }
 }
