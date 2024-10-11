@@ -172,10 +172,8 @@ iframe {
 }
 
 .header {
-  background-image: url("../img/bg-header.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
+  position: absolute;
+  width: 100%;
 }
 .header__menu {
   display: flex;
@@ -186,12 +184,17 @@ iframe {
 @media (max-width: 940px) {
   .header__menu {
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     gap: 15px;
   }
 }
 .header__logo {
   margin-right: auto;
+}
+@media (max-width: 940px) {
+  .header__logo {
+    margin-right: 0;
+  }
 }
 .header__address {
   max-width: 151px;
@@ -199,6 +202,7 @@ iframe {
   font-size: 12px;
   position: relative;
   margin-right: 91px;
+  text-align: center;
 }
 @media (max-width: 940px) {
   .header__address {
@@ -219,6 +223,7 @@ iframe {
 }
 .header__phone {
   position: relative;
+  text-align: center;
 }
 .header__phone::before {
   content: "";
@@ -245,13 +250,19 @@ iframe {
 }
 
 .hero {
-  max-width: 650px;
-  padding: 187px 0 465px;
+  background-image: url("../img/bg-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  padding: 307px 0 465px;
 }
 @media (max-width: 940px) {
   .hero {
-    padding: 30px 0 375px;
+    padding: 300px 0 375px;
   }
+}
+.hero__content {
+  max-width: 650px;
 }
 .hero__supertitle {
   margin-bottom: 24px;
@@ -312,6 +323,7 @@ iframe {
     margin-right: 0;
     padding: 20px 30px;
     font-size: 16px;
+    width: 100%;
   }
 }
 .hero__action-text {
@@ -396,6 +408,7 @@ iframe {
   .product__btn {
     padding: 20px 30px;
     font-size: 16px;
+    width: 100%;
   }
 }
 
@@ -487,6 +500,7 @@ iframe {
     justify-self: center;
     padding: 20px 30px;
     font-size: 16px;
+    width: 100%;
   }
 }
 
@@ -1032,6 +1046,7 @@ iframe {
   .form__btn {
     padding: 20px 30px;
     font-size: 16px;
+    width: 100%;
   }
 }
 .form__checkbox-label {
