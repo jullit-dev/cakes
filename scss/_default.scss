@@ -48,21 +48,25 @@ svg {
 
 
 button {
+  font-family: $font-family;
   padding: 0;
   cursor: pointer;
   border: none;
   background-color: transparent;
-  transition: filter .3s ease-in-out,
-    transform .3s ease-in-out;
   outline: none;
 }
 
-button:hover,
-button:focus-visible {
+.button-effect {
+  transition: filter .3s ease-in-out,
+    transform .3s ease-in-out;
+}
+
+.button-effect:hover,
+.button-effect:focus-visible {
   filter: contrast(130%);
 }
 
-button:active {
+.button-effect:active {
   transform: scale(0.9);
 }
 
@@ -136,22 +140,26 @@ iframe {
   color: $dark-text;
 }
 
-// /* Модальное окно */
-// .modal-overlay {
-//   position: fixed;
-//   overflow-y: auto;
-//   padding: 20px 10px;
-//   z-index: 100;
-//   inset: 0;
-//   display: flex;
-//   background-color: rgba(0, 0, 0, 0.7);
-//   display: none;
+/* Модальное окно */
+.modal-overlay {
+  position: fixed;
+  overflow-y: auto;
+  padding: 20px 10px;
+  z-index: 100;
+  inset: 0;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
 
-//   &__close-button {
-//     position: fixed;
-//     color: #fff;
-//     top: 12px;
-//     right: 12px;
-//     font-size: 28px;
-//   }
-// }
+  &__close-button {
+    position: fixed;
+    color: #fff;
+    top: 17px;
+    right: 17px;
+    font-size: 30px;
+
+    @include mobile {
+      right: 7px;
+    }
+  }
+}

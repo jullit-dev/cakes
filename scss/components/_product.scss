@@ -4,6 +4,11 @@
 .product {
   &__description {
     padding: 50px 44px;
+
+    @include mobile {
+      padding: 30px 14px 44px;
+      text-align: center;
+    }
   }
 
   &__title {
@@ -38,7 +43,6 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 1.52;
-    letter-spacing: 0.07em;
     color: $dark-text;
 
     @include mobile {

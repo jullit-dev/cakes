@@ -1,0 +1,49 @@
+@use "../variables" as *;
+@use "../media" as *;
+
+.modal {
+  padding: 40px 70px;
+  border-radius: 8px;
+  background-color: $light-background;
+
+  @include tablet {
+    padding: 15px 20px;
+  }
+}
+
+.container--modal {
+  padding-top: 50px;
+  padding-left: 30px;
+}
+
+ol {
+  list-style: none;
+  counter-reset: li;
+  padding: 0;
+}
+
+li::before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+}
+
+.modal__item-subtitle:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.modal__subtitle {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.modal__item-subtitle::before {
+  font-weight: bold;
+}
+
+.modal__list {
+  padding-left: 20px;
+}
+
+.modal__item:not(:last-child) {
+  margin-bottom: 15px;
+}

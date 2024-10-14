@@ -115,7 +115,6 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 1.52;
-    letter-spacing: 0.07em;
     text-align: center;
     color: $dark-text;
 
@@ -143,5 +142,9 @@
 
   &__checkbox-link {
     text-decoration: underline;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.3;
+    color: #7e868e;
   }
 }
