@@ -88,6 +88,17 @@ ul {
   margin: 0;
 }
 
+ol {
+  list-style: none;
+  counter-reset: li;
+  padding: 0;
+}
+
+ol li::before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+}
+
 h1,
 h2,
 h3,

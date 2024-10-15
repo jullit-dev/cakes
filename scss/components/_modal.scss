@@ -16,17 +16,6 @@
   padding-left: 30px;
 }
 
-ol {
-  list-style: none;
-  counter-reset: li;
-  padding: 0;
-}
-
-li::before {
-  counter-increment: li;
-  content: counters(li, ".") ". ";
-}
-
 .modal__item-subtitle:not(:last-child) {
   margin-bottom: 40px;
 }

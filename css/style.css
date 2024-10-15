@@ -122,6 +122,17 @@ ul {
   margin: 0;
 }
 
+ol {
+  list-style: none;
+  counter-reset: li;
+  padding: 0;
+}
+
+ol li::before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+}
+
 h1,
 h2,
 h3,
@@ -1147,17 +1158,6 @@ iframe {
 .container--modal {
   padding-top: 50px;
   padding-left: 30px;
-}
-
-ol {
-  list-style: none;
-  counter-reset: li;
-  padding: 0;
-}
-
-li::before {
-  counter-increment: li;
-  content: counters(li, ".") ". ";
 }
 
 .modal__item-subtitle:not(:last-child) {
