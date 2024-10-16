@@ -95,12 +95,12 @@ button {
   transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.button-effect:hover,
-.button-effect:focus-visible {
+.button-effect:hover:not(:disabled),
+.button-effect:focus-visible:not(:disabled) {
   filter: contrast(130%);
 }
 
-.button-effect:active {
+.button-effect:active:not(:disabled) {
   transform: scale(0.9);
 }
 
@@ -142,7 +142,8 @@ fieldset {
   margin: 0;
 }
 
-input {
+input,
+textarea {
   outline: none;
 }
 
@@ -197,12 +198,15 @@ iframe {
   background-color: rgba(0, 0, 0, 0.7);
   display: none;
 }
+.modal-overlay .modal {
+  position: relative;
+}
 .modal-overlay__close-button {
-  position: fixed;
-  color: #fff;
+  position: absolute;
+  color: #2e363e;
   top: 17px;
-  right: 17px;
-  font-size: 30px;
+  right: 21px;
+  font-size: 40px;
 }
 @media (max-width: 520px) {
   .modal-overlay__close-button {
@@ -289,6 +293,7 @@ iframe {
 }
 
 .hero {
+  background-color: #081130;
   background-image: url("../img/bg-header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -410,6 +415,9 @@ iframe {
   .catalog__list {
     grid-template-columns: minmax(320px, 380px);
   }
+}
+.catalog__produst {
+  height: 100%;
 }
 
 .product__description {
@@ -1042,21 +1050,17 @@ iframe {
     grid-template-columns: 1fr;
   }
 }
+.form__textarea {
+  grid-column: span 2;
+  resize: none;
+  overflow: hidden;
+  justify-content: center;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  background-image: url("../img/icons/form-question.svg");
+}
 .form__input {
-  padding: 32px 58px 29px;
-  background-color: #f2f6fa;
   background-image: url("../img/icons/form-phone.svg");
-  background-repeat: no-repeat;
-  background-position: top 30px left 26px;
-  border: 0;
-  border-radius: 8px;
-  width: 380px;
-  height: 85px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.52;
-  color: #2e363e;
-  transition: background-color 0.3s ease-in-out;
 }
 @media (max-width: 940px) {
   .form__input {
@@ -1064,20 +1068,69 @@ iframe {
     width: 100%;
   }
 }
-.form__input::-moz-placeholder {
+.form__textarea, .form__input {
+  padding: 32px 58px 29px;
+  background-color: #f2f6fa;
+  background-repeat: no-repeat;
+  background-position: top 30px left 26px;
+  background-size: 25px;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.52;
+  color: #2e363e;
+  transition: background-color 0.3s ease-in-out;
+}
+.form__textarea::-moz-placeholder, .form__input::-moz-placeholder {
   font-weight: 400;
   font-size: 15px;
   line-height: 1.6;
   color: #7e868e;
 }
-.form__input::placeholder {
+.form__textarea::placeholder, .form__input::placeholder {
   font-weight: 400;
   font-size: 15px;
   line-height: 1.6;
   color: #7e868e;
 }
-.form__input:hover, .form__input:focus-visible {
+.form__textarea:hover, .form__textarea:focus-visible, .form__input:hover, .form__input:focus-visible {
   background-color: #e5edf5;
+}
+.form__input-file {
+  position: relative;
+  display: inline-block;
+  grid-column: span 2;
+  cursor: pointer;
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+  border-radius: 8px;
+  padding: 29px 41px;
+  background-color: #fed84c;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.52;
+  text-align: center;
+  color: #2e363e;
+}
+@media (max-width: 520px) {
+  .form__input-file {
+    padding: 20px 30px;
+    font-size: 16px;
+  }
+}
+.form__input-file input[type=file] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
+}
+.form__input-file:hover, .form__input-file:focus-visible {
+  filter: contrast(130%);
+}
+.form__input-file:active {
+  transform: scale(0.9);
 }
 .form__btn {
   border-radius: 8px;
@@ -1145,9 +1198,14 @@ iframe {
 }
 
 .modal {
-  padding: 40px 70px;
+  padding: 64px;
   border-radius: 8px;
   background-color: #ffffff;
+}
+@media (max-width: 1140px) {
+  .modal {
+    padding: 40px;
+  }
 }
 @media (max-width: 940px) {
   .modal {
@@ -1156,8 +1214,13 @@ iframe {
 }
 
 .container--modal {
-  padding-top: 50px;
-  padding-left: 30px;
+  padding: 0;
+  align-self: flex-start;
+  margin: auto;
+}
+
+.modal__title {
+  padding-right: 45px;
 }
 
 .modal__item-subtitle:not(:last-child) {

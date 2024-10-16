@@ -7,7 +7,7 @@
   <link href="css/style.css" rel="stylesheet">
   <script src="libraries/swiper-bundle.min.js"></script>
   <script defer src="js/swiper.js"></script>
-  <script defer src="js/policy.js"></script>
+  <script defer src="js/script.js"></script>
   <title>Сладкий сундук — доставка пирожных и капкейков</title>
 </head>
 <body class="body">
@@ -49,7 +49,7 @@
         </div>
       </div>
     </div>
-    <section class="catalog">
+    <section class="catalog" id="catalog">
       <div class="container">
         <h2 class="catalog__title">Для любых событий и&nbsp;дорогих вам людей</h2>
         <ul class="catalog__list">
@@ -171,7 +171,7 @@
           <h2 class="order__supertitle supertitle">Не&nbsp;нашли то&nbsp;что нужно?</h2>
           <h3 class="order__title">Приготовим заказ любой сложности по&nbsp;фото или эскизу</h3>
           <p class="order__text">Загрузите фотографию или эскиз капкейков и&nbsp;мы&nbsp;рассчитаем стоимость за&nbsp;30&nbsp;минут</p>
-          <button class="button-effect order__btn">Загрузить фотографию</button>
+          <button class="button-effect order__btn" aria-label="Открыть окно с формой для отправки фотографии или эскизы капкейков">Загрузить фотографию</button>
         </div>
       </div>
     </section>
@@ -195,7 +195,7 @@
           <button class="button-effect confectioner__btn">Задать вопрос Юлии</button>
         </div>
         <article class="confectioner__card card">
-          <img class="card__img" src="img/confectioner.png" alt="Кондитер Юлия Кондратьева">
+          <img class="card__img" src="img/confectioner.png" alt="Кондитер Юлия Кондратьева" aria-label="Открыть окно с вашим вопросом Юлии">
           <div class="card__info">
             <div class="card__wrap">
               <svg width="24" height="60" viewBox="0 0 24 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -370,7 +370,7 @@
       </ul>
     </section>
 
-    <section class="feedback">
+    <section class="feedback" id="feedback">
       <div class="container">
         <form class="feedback__form form" action="#" method="post">
           <h2 class="form__title">
@@ -380,9 +380,9 @@
             Мы&nbsp;перезвоним в&nbsp;течении 15&nbsp;минут, чтобы уточнить ваши пожелания
           </p>
           <fieldset class="form__field">
-            <input class="form__input" type="tel" name="phone" id="phone" aria-label="Введите свой номер телефона в это поле" placeholder="Номер телефона">
-            <button class="button-effect form__btn" type="submit" aria-label="Отправить номер телефона, чтобы мы вам перезвонили" disabled>Сделать заказ</button>
-            <label class="form__checkbox-label"><input class="form__checkbox" id="checkbox" type="checkbox" checked>Нажамая на&nbsp;кнопку, вы&nbsp;соглашаетесь с&nbsp;
+            <input class="form__input" type="tel" name="phone" id="phone" aria-label="Введите свой номер телефона в это поле" placeholder="Номер телефона"  required>
+            <button class="button-effect form__btn" type="submit" aria-label="Отправить номер телефона, чтобы мы вам перезвонили">Сделать заказ</button>
+            <label class="form__checkbox-label"><input class="form__checkbox" id="checkbox" type="checkbox" checked  required>Нажамая на&nbsp;кнопку, вы&nbsp;соглашаетесь с&nbsp;
               <button class="form__checkbox-link" aria-label="Открыть окно с информацией о политике обработки персональных данных">условиями обработки персональных данных</button>
             </label>
           </fieldset>
@@ -391,7 +391,6 @@
     </section>
 
     <div class="modal-overlay">
-      <button class="modal-overlay__close-button" aria-label="Закрыть окно с информацией о политике обработки персональных данных">&times;</button>
       <div class="container container--modal">
       </div>
 

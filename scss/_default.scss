@@ -61,12 +61,12 @@ button {
     transform .3s ease-in-out;
 }
 
-.button-effect:hover,
-.button-effect:focus-visible {
+.button-effect:hover:not(:disabled),
+.button-effect:focus-visible:not(:disabled) {
   filter: contrast(130%);
 }
 
-.button-effect:active {
+.button-effect:active:not(:disabled) {
   transform: scale(0.9);
 }
 
@@ -108,7 +108,8 @@ fieldset {
   margin: 0;
 }
 
-input {
+input,
+textarea {
   outline: none;
 }
 
@@ -162,12 +163,16 @@ iframe {
   background-color: rgba(0, 0, 0, 0.7);
   display: none;
 
+  .modal {
+    position: relative;
+  }
+
   &__close-button {
-    position: fixed;
-    color: #fff;
+    position: absolute;
+    color: $dark-text;
     top: 17px;
-    right: 17px;
-    font-size: 30px;
+    right: 21px;
+    font-size: 40px;
 
     @include mobile {
       right: 7px;

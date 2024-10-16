@@ -2,6 +2,7 @@
 @use "../media" as *;
 
 .hero {
+  background-color: $dark-background;
   background-image: url('../img/bg-header.jpg');
   background-repeat: no-repeat;
   background-size: cover;

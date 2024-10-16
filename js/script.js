@@ -1,19 +1,116 @@
+/* DOM */
+const containerModal = document.querySelector('.container--modal');
+const modalOverlay = document.querySelector('.modal-overlay');
+const btnOpenModalPhoto = document.querySelector('.order__btn');
+const btnOpenModalQuestion = document.querySelector('.confectioner__btn');
 const btnOpenModalPolicy = document.querySelector('.form__checkbox-link');
-const modalPolicy = document.querySelector('.modal-overlay');
-const containerModalPolicy = document.querySelector('.container--modal');
-
-const btnCloseModalPolicy = document.querySelector('.modal-overlay__close-button');
 
 
-btnOpenModalPolicy.addEventListener('click', (e) => {
+/* Скролл до якорных ссылок */
+document.querySelector('.hero__action-button').addEventListener('click', (e) => { 
   e.preventDefault();
-  modalPolicy.style = "display: flex;"
+  document.getElementById('catalog').scrollIntoView({
+    behavior: 'smooth'
+  });
+});
 
-  containerModalPolicy.innerHTML = `
+document.querySelectorAll('.product__btn').forEach(el => {
+  el.addEventListener('click', (e) => { 
+    e.preventDefault();
+    document.getElementById('feedback').scrollIntoView({
+      behavior: 'smooth'
+    });
+  })
+});
+
+/* Модальное окно */
+const closeModal = () => {
+  containerModal.innerHTML = '';
+  modalOverlay.style.display = 'none';
+};
+
+const openModal = (textHtml) => {
+  modalOverlay.style.display = 'flex';
+
+  containerModal.innerHTML = textHtml;
+
+  modalOverlay.addEventListener('click', ({target}) => {
+    if (target === modalOverlay || target.closest('.modal-overlay__close-button')) {
+      closeModal();
+    };
+  });
+};
+
+/* Модальное окно "загрузить фото" */
+const photoText = `
+    <div class="modal">
+      <button class="modal-overlay__close-button" aria-label="Закрыть окно с информацией о политике обработки персональных данных">&times;</button>
+      <div class="container">
+        <form class="modal__form form" action="#" method="post">
+          <h2 class="form__title">
+            Загрузите фотографию или эскиз капкейков
+          </h2>
+          <p class="form__text">
+            Мы&nbsp;перезвоним, чтобы уточнить ваши пожелания
+          </p>
+          <fieldset class="form__field">
+            <label class="form__input-file">
+              <input type="file" name="photo-file" id="photo-file" aria-label="Добавьте ваше фотографию или эскиз капкейков" accept=".png, .jpg, .jpeg" multiple required>
+              <span>Выберите файл</span>
+            </label>
+            <input class="form__input" type="tel" name="photo-phone" id="photo-phone" aria-label="Введите свой номер телефона в это поле" placeholder="Номер телефона" required>
+            <button class="button-effect form__btn" type="submit" aria-label="Отправить номер телефона, чтобы мы вам перезвонили">Сделать заказ</button>
+            <label class="form__checkbox-label"><input class="form__checkbox" name="photo-checkbox" id="photo-checkbox" type="checkbox" checked required>Нажамая на&nbsp;кнопку, вы&nbsp;соглашаетесь с&nbsp;условиями обработки персональных данных
+            </label>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  `
+
+btnOpenModalPhoto.addEventListener('click', (e) => {
+  e.preventDefault();
+  openModal(photoText);
+});
+
+
+/* Модальное окно "задать вопрос" */
+const questionText = `
+    <div class="modal">
+      <button class="modal-overlay__close-button" aria-label="Закрыть окно с вашим вопросом Юлии">&times;</button>
+      <div class="container">
+        <form class="modal__form form" action="#" method="post">
+          <h2 class="form__title">
+            Задайте вопрос Юлии
+          </h2>
+          <p class="form__text">
+            Мы&nbsp;перезвоним и&nbsp;ответим на&nbsp;ваш вопрос
+          </p>
+          <fieldset class="form__field">
+            <textarea class="form__textarea" name="question-text" id="question-text" maxlength="500" rows="3" aria-label="Введите свой вопрос в это поле" placeholder="Ваш вопрос" required></textarea>
+            <input class="form__input" type="tel" name="question-phone" id="question-phone" aria-label="Введите свой номер телефона в это поле" placeholder="Номер телефона" required>
+            <button class="button-effect form__btn" type="submit" aria-label="Отправить номер телефона, чтобы мы вам перезвонили">Сделать заказ</button>
+            <label class="form__checkbox-label"><input class="form__checkbox" name="question-checkbox" id="question-checkbox" type="checkbox" checked required>Нажамая на&nbsp;кнопку, вы&nbsp;соглашаетесь с&nbsp;условиями обработки персональных данных
+            </label>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  `
+
+btnOpenModalQuestion.addEventListener('click', (e) => {
+  e.preventDefault();
+  openModal(questionText);
+});
+
+
+/* Модальное окно "политика обработки персональных данных" */
+const policyText = `
       <div class="modal">
         <h2 class="modal__title">
           Политика обработки персональных данных
         </h2>
+        <button class="modal-overlay__close-button" aria-label="Закрыть окно с информацией о политике обработки персональных данных">&times;</button>
         <ol class="modal__list-subtitle">
           <li class="modal__item-subtitle">
             <h3 class="modal__subtitle">Общие положения</h3>
@@ -74,11 +171,9 @@ btnOpenModalPolicy.addEventListener('click', (e) => {
           </li>
         </ol>
       </div>
-  `;
-});
+  `
 
-btnCloseModalPolicy.addEventListener('click', (e) => {
+btnOpenModalPolicy.addEventListener('click', (e) => {
   e.preventDefault();
-  containerModalPolicy.innerHTML = '';
-  modalPolicy.style = "display: none;"
+  openModal(policyText);
 });

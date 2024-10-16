@@ -2,9 +2,13 @@
 @use "../media" as *;
 
 .modal {
-  padding: 40px 70px;
+  padding: 64px;
   border-radius: 8px;
   background-color: $light-background;
+
+  @include laptop {
+    padding: 40px;
+  }
 
   @include tablet {
     padding: 15px 20px;
@@ -12,8 +16,13 @@
 }
 
 .container--modal {
-  padding-top: 50px;
-  padding-left: 30px;
+  padding: 0;
+  align-self: flex-start;
+  margin: auto;
+}
+
+.modal__title {
+  padding-right: 45px;
 }
 
 .modal__item-subtitle:not(:last-child) {
