@@ -7,4 +7,4 @@
 * JavaScript
 * Swiper-js
 
-[Открыть сайт](https:jullit-dev.github.io/cakes)
+[Открыть сайт](https://jullit-dev.github.io/cakes)
